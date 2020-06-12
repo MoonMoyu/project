@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.2.xsd ">
+        <bean id="d1" class="java.util.Date"/>
+        <bean id="a1" class="org.lisy.spring.person.entity.Address">
+            <property name="address1">
+                <value>北京</value>
+            </property>
+            <property name="code">
+                <value>20</value>
+            </property>
+        </bean>
+        <bean id="p1" class="org.lisy.spring.person.entity.Person">
+            <property name="name">
+                <value>张三</value>
+            </property>
+            <property name="age">
+                <value>20</value>
+            </property>
+            <property name="date">
+                <ref bean="d1"/>
+            </property>
+            <property name="address">
+                <ref bean="a1"/>
+            </property>
+
+        </bean>
+
+</beans>
