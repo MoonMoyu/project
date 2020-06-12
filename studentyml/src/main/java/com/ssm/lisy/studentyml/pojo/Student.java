@@ -9,6 +9,9 @@ public class Student {
 
     private String address;
 
+    public Student() {
+    }
+
     public Integer getId() {
         return id;
     }
